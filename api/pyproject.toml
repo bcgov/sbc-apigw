@@ -17,7 +17,7 @@ flask-babel = "2.0.0"
 flask-jwt-oidc = "^0.3.0"
 gunicorn = "^21.2.0"
 auth-api = {git = "https://github.com/bcgov/sbc-auth.git", rev = "main", subdirectory = "auth-api"}
-sbc-common-components = {git = "https://github.com/bcgov/sbc-common-components.git", rev = "master", subdirectory = "python"}
+sbc-common-components = {git = "https://github.com/kris-daxiom/sbc-common-components.git", rev = "master", subdirectory = "python"}
 
 [tool.poetry.group.test.dependencies]
 freezegun = "^1.2.2"
