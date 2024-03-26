@@ -81,7 +81,7 @@ const pageItems = ref(Array(11))
     </div>
 
     <UTable
-      class="min-h-[10rem]"
+      class="min-h-40"
       :empty-state="{
         icon: 'i-heroicons-circle-stack-20-solid',
         label: 'No users found'

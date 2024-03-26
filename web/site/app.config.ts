@@ -131,7 +131,8 @@ export default defineAppConfig({
     },
     verticalNavigation: {
       active: 'text-bcGovColor-activeBlue dark:text-white font-semibold',
-      inactive: 'text-bcGovColor-midGray dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50'
+      inactive: 'text-bcGovColor-midGray dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50',
+      base: 'group relative flex items-center gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-white before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75'
     }
   }
 })

@@ -30,7 +30,7 @@ const links = [
 <template>
   <footer
     id="sbc-main-footer"
-    class="border-t-2 border-bcGovColor-navDivider bg-bcGovColor-footer p-2 dark:border-t-[1px] dark:bg-bcGovColor-darkGray"
+    class="border-t-2 border-bcGovColor-navDivider bg-bcGovColor-footer p-2 dark:border-t dark:bg-bcGovColor-darkGray"
   >
     <div class="mx-auto flex max-w-[1360px] items-center justify-between">
       <nav :aria-label="$t('SbcFooter.navLabel')" class="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">

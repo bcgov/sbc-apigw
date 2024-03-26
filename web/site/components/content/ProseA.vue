@@ -17,18 +17,19 @@ const props = defineProps({
   }
 })
 
-const resolvePath = computed(() => {
+// return localized route path if target !== blank and is not a download link
+function resolvePath () {
   if (props.target === '_blank' || props.download !== undefined) {
     return props.href
   } else {
     return localePath(props.href)
   }
-})
+}
 </script>
 
 <template>
   <UButton
-    :to="resolvePath"
+    :to="resolvePath()"
     :target
     :download
     variant="link"

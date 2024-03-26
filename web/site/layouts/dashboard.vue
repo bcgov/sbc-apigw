@@ -1,40 +1,22 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-// temp items for dashboard - different than docs
-const tempItems = [
-  {
-    label: 'Dashboard Nav Item',
-    defaultOpen: true,
-    children: [
-      {
-        label: 'Child 1',
-        to: localePath('/sbc/dashboard')
-      },
-      {
-        label: 'Child 2',
-        to: localePath('/sbc/dashboard')
-      }
-    ]
-  }
-]
+import { SbcDashboardSubHeader } from '#components'
+const navItems = inject<Ref<AccordianNavItem[]>>('dashNavItems')
+const sandboxHeaderRef = ref<InstanceType<typeof SbcDashboardSubHeader> | null>(null)
+
+const { height } = useElementSize(sandboxHeaderRef)
 </script>
 
 <template>
-  <div
-    class="flex min-h-screen flex-col bg-bcGovColor-gray1 dark:bg-bcGovGray-900"
-  >
-    <SbcHeaderMain :accordian-items="tempItems" />
-    <SbcDashboardSubHeader />
-    <main class="relative mx-auto flex w-full max-w-[1360px] grow flex-col lg:grid lg:grid-cols-12">
-      <aside class="absolute hidden h-full min-w-fit flex-1 overflow-y-auto border-r border-bcGovGray-500 bg-bcGovColor-gray1 px-2 py-4 lg:static lg:col-start-1 lg:col-end-3 lg:block dark:bg-bcGovGray-900">
-        <nav>
-          <SbcAccordianNavigation :nav-items="tempItems" />
-        </nav>
-      </aside>
-      <div class="w-full lg:col-span-full lg:col-start-4 xl:-ml-10">
+  <main class="mx-auto w-full max-w-[1360px] grow">
+    <SbcDashboardSubHeader ref="sandboxHeaderRef" class="fixed inset-x-0 z-50" />
+    <div class="flex grow flex-col lg:grid lg:grid-cols-12" :style="{ marginTop: `${height}px` }">
+      <SbcSideNavigation
+        :nav-items="navItems"
+        class="fixed col-start-1 col-end-3 mt-2 hidden lg:block"
+      />
+      <div class="w-full lg:col-span-full lg:col-start-3">
         <slot />
       </div>
-    </main>
-    <SbcFooter />
-  </div>
+    </div>
+  </main>
 </template>

@@ -3,9 +3,10 @@ defineProps<{
   navItems: AccordianNavItem[] | undefined
 }>()
 
+defineEmits<{(e: 'close-mobile'): void }>()
 </script>
 <template>
-  <div class="flex flex-col">
+  <nav class="flex flex-col">
     <!-- creates an accordian for each object in navItems array -->
     <UAccordion
       :items="navItems || []"
@@ -42,8 +43,9 @@ defineProps<{
             active: 'text-primary-500 dark:text-[#7BB5EF] border-[#94A3B8] dark:border-[#7BB5EF] font-semibold',
             inactive: 'border-transparent hover:border-gray-900 dark:hover:border-white text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
           }"
+          @click="$emit('close-mobile')"
         />
       </template>
     </UAccordion>
-  </div>
+  </nav>
 </template>
