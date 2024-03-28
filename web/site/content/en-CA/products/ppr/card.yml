@@ -1,7 +1,7 @@
 # Used to populate product card components
-name: Product Name Here
-description: Product Description Here
-badge: NEW | BETA etc
+name: Personal Property Registry
+description: Record security interests and liens against personal property belonging to British Columbia businesses and individuals. Here you can
+badge: Stable
 bulletPoints: 
-  - bullet point 1
-  - bullet point 2
+  - Register security agreements and liens.
+  - Search for registered security agreements and liens.bullet point 1

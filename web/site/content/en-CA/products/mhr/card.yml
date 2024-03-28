@@ -1,7 +1,7 @@
 # Used to populate product card components
-name: Product Name Here
-description: Product Description Here
-badge: NEW | BETA etc
+name: Manufactured Home Registry
+description: In the beta version of the Manufactured Home Registry, you are currently able to
+badge: BETA
 bulletPoints: 
-  - bullet point 1
-  - bullet point 2
+  - Search for, and download reports for, manufactured homes and personal property liens on manufactured homes.
+  - Search by owner name, organization, registration or serial number.

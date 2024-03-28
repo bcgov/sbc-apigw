@@ -1,7 +1,7 @@
 # Used to populate product card components
-name: Product Name Here
-description: Product Description Here
-badge: NEW | BETA etc
+name: Business Registry
+description: Start a B.C. based business and maintain it's info on the Registry
+badge: NEW
 bulletPoints: 
-  - bullet point 1
-  - bullet point 2
+  - Incorporate and manage benefit companies and cooperative associations.
+  - Register and manage general partnerships and sole proprietorships

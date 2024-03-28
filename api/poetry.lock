@@ -186,17 +186,6 @@ dev = ["cogapp", "pre-commit", "pytest", "wheel"]
 tests = ["pytest"]
 
 [[package]]
-name = "async-timeout"
-version = "4.0.3"
-description = "Timeout context manager for asyncio programs"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "async-timeout-4.0.3.tar.gz", hash = "sha256:4640d96be84d82d02ed59ea2b7105a0f7b33abe8703703cd0ab0bf87c427522f"},
-    {file = "async_timeout-4.0.3-py3-none-any.whl", hash = "sha256:7405140ff1230c310e51dc27b3145b9092d659ce68ff733fb0cefe3ee42be028"},
-]
-
-[[package]]
 name = "asyncio-nats-client"
 version = "0.11.5"
 description = "NATS client for Python Asyncio"
@@ -711,13 +700,13 @@ tests = ["coverage", "coveralls", "dill", "mock", "nose"]
 
 [[package]]
 name = "faker"
-version = "20.1.0"
+version = "24.3.0"
 description = "Faker is a Python package that generates fake data for you."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "Faker-20.1.0-py3-none-any.whl", hash = "sha256:aeb3e26742863d1e387f9d156f1c36e14af63bf5e6f36fb39b8c27f6a903be38"},
-    {file = "Faker-20.1.0.tar.gz", hash = "sha256:562a3a09c3ed3a1a7b20e13d79f904dfdfc5e740f72813ecf95e4cf71e5a2f52"},
+    {file = "Faker-24.3.0-py3-none-any.whl", hash = "sha256:9978025e765ba79f8bf6154c9630a9c2b7f9c9b0f175d4ad5e04b19a82a8d8d6"},
+    {file = "Faker-24.3.0.tar.gz", hash = "sha256:5fb5aa9749d09971e04a41281ae3ceda9414f683d4810a694f8a8eebb8f9edec"},
 ]
 
 [package.dependencies]
@@ -1063,13 +1052,13 @@ tornado = ["tornado (>=0.2)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.98.17"
+version = "6.99.12"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "hypothesis-6.98.17-py3-none-any.whl", hash = "sha256:313f64b9f9f95e12c8b5342466bef7f352d2608afeeb434817c039602b45f0c4"},
-    {file = "hypothesis-6.98.17.tar.gz", hash = "sha256:bbd227000cc21a9686a00867f031479c3812d8ab076e4af1c813f6b3a50c98f5"},
+    {file = "hypothesis-6.99.12-py3-none-any.whl", hash = "sha256:299213c31e31a512e526b8e43917c7a08f3ffbf05657f008f56228420cf4547d"},
+    {file = "hypothesis-6.99.12.tar.gz", hash = "sha256:421c57c9e8cc0837622881ca1d5e099404aef6600cdea3ade3004fc992a44d7f"},
 ]
 
 [package.dependencies]
@@ -1077,9 +1066,10 @@ attrs = ">=22.2.0"
 sortedcontainers = ">=2.1.0,<3.0.0"
 
 [package.extras]
-all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "django (>=3.2)", "dpcontracts (>=0.4)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2024.1)"]
+all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "crosshair-tool (>=0.0.51)", "django (>=3.2)", "dpcontracts (>=0.4)", "hypothesis-crosshair (>=0.0.2)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.17.3)", "pandas (>=1.1)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2024.1)"]
 cli = ["black (>=19.10b0)", "click (>=7.0)", "rich (>=9.0.0)"]
 codemods = ["libcst (>=0.3.16)"]
+crosshair = ["crosshair-tool (>=0.0.51)", "hypothesis-crosshair (>=0.0.2)"]
 dateutil = ["python-dateutil (>=1.4)"]
 django = ["django (>=3.2)"]
 dpcontracts = ["dpcontracts (>=0.4)"]
@@ -1195,28 +1185,43 @@ format = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-validat
 format-nongpl = ["fqdn", "idna", "isoduration", "jsonpointer (>1.13)", "rfc3339-validator", "rfc3986-validator (>0.1.0)", "uri-template", "webcolors (>=1.11)"]
 
 [[package]]
-name = "launchdarkly-server-sdk"
-version = "8.3.0"
-description = "LaunchDarkly SDK for Python"
+name = "launchdarkly-eventsource"
+version = "1.1.1"
+description = "LaunchDarkly SSE Client"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "launchdarkly_server_sdk-8.3.0-py3-none-any.whl", hash = "sha256:bc59dbf9897fd2d9c70098c13bb073983bef29f58cae9439e70b2463982f1bb5"},
-    {file = "launchdarkly_server_sdk-8.3.0.tar.gz", hash = "sha256:cdb8fadd457e6ae569c0cb0d5de112d7f2a9c84a0ba03167bb7d68710dde7283"},
+    {file = "launchdarkly_eventsource-1.1.1-py3-none-any.whl", hash = "sha256:3d7e5301bc4b4a744ecdaa10de8bce52c2f3c66a97e9aa10ab11ca81b67fb31b"},
+    {file = "launchdarkly_eventsource-1.1.1.tar.gz", hash = "sha256:211791f1267f9b7b0a62a0bb5fc9c5ed1fb4a834440f16be551968dbe772557a"},
+]
+
+[package.dependencies]
+urllib3 = ">=1.26.0,<3"
+
+[[package]]
+name = "launchdarkly-server-sdk"
+version = "9.3.0"
+description = "LaunchDarkly SDK for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "launchdarkly_server_sdk-9.3.0-py3-none-any.whl", hash = "sha256:1b9580d49755735bd7acccd4e2cecfc17a1669e8e499e96e396a401012dbdae3"},
+    {file = "launchdarkly_server_sdk-9.3.0.tar.gz", hash = "sha256:43f786ee5ea1950072bf8eee0fe95c62f9fcd5f5f0e0495453b3be26fd2d5c23"},
 ]
 
 [package.dependencies]
 certifi = ">=2018.4.16"
 expiringdict = ">=1.1.4"
+launchdarkly-eventsource = ">=1.1.0,<2.0.0"
 pyRFC3339 = ">=1.0"
 semver = ">=2.10.2"
-urllib3 = ">=1.22.0,<3"
+urllib3 = ">=1.26.0,<3"
 
 [package.extras]
 consul = ["python-consul (>=1.0.1)"]
 dynamodb = ["boto3 (>=1.9.71)"]
 redis = ["redis (>=2.10.5)"]
-test-filesource = ["pyyaml (>=3.0,<5.2)", "watchdog (>=0.9,!=0.10.5,<1.0)"]
+test-filesource = ["pyyaml (>=5.3.1)", "watchdog (>=3.0.0)"]
 
 [[package]]
 name = "lovely-pytest-docker"
@@ -1940,17 +1945,17 @@ testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtuale
 
 [[package]]
 name = "pytest-mock"
-version = "3.12.0"
+version = "3.14.0"
 description = "Thin-wrapper around the mock package for easier use with pytest"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest-mock-3.12.0.tar.gz", hash = "sha256:31a40f038c22cad32287bb43932054451ff5583ff094bca6f675df2f8bc1a6e9"},
-    {file = "pytest_mock-3.12.0-py3-none-any.whl", hash = "sha256:0972719a7263072da3a21c7f4773069bcc7486027d7e8e1f81d98a47e701bc4f"},
+    {file = "pytest-mock-3.14.0.tar.gz", hash = "sha256:2719255a1efeceadbc056d6bf3df3d1c5015530fb40cf347c0f9afac88410bd0"},
+    {file = "pytest_mock-3.14.0-py3-none-any.whl", hash = "sha256:0b72c38033392a5f4621342fe11e9219ac11ec9d375f8e2a0c164539e0d70f6f"},
 ]
 
 [package.dependencies]
-pytest = ">=5.0"
+pytest = ">=6.2.5"
 
 [package.extras]
 dev = ["pre-commit", "pytest-asyncio", "tox"]
@@ -2097,9 +2102,6 @@ files = [
     {file = "redis-5.0.3.tar.gz", hash = "sha256:4973bae7444c0fbed64a06b87446f79361cb7e4ec1538c022d696ed7a5015580"},
 ]
 
-[package.dependencies]
-async-timeout = {version = ">=4.0.3", markers = "python_full_version < \"3.11.3\""}
-
 [package.extras]
 hiredis = ["hiredis (>=1.0.0)"]
 ocsp = ["cryptography (>=36.0.1)", "pyopenssl (==20.0.1)", "requests (>=2.26.0)"]
@@ -2194,13 +2196,13 @@ files = [
 
 [[package]]
 name = "sentry-sdk"
-version = "1.40.6"
+version = "1.43.0"
 description = "Python client for Sentry (https://sentry.io)"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sentry-sdk-1.40.6.tar.gz", hash = "sha256:f143f3fb4bb57c90abef6e2ad06b5f6f02b2ca13e4060ec5c0549c7a9ccce3fa"},
-    {file = "sentry_sdk-1.40.6-py2.py3-none-any.whl", hash = "sha256:becda09660df63e55f307570e9817c664392655a7328bbc414b507e9cb874c67"},
+    {file = "sentry-sdk-1.43.0.tar.gz", hash = "sha256:41df73af89d22921d8733714fb0fc5586c3461907e06688e6537d01a27e0e0f6"},
+    {file = "sentry_sdk-1.43.0-py2.py3-none-any.whl", hash = "sha256:8d768724839ca18d7b4c7463ef7528c40b7aa2bfbf7fe554d5f9a7c044acfd36"},
 ]
 
 [package.dependencies]
@@ -2217,6 +2219,7 @@ asyncpg = ["asyncpg (>=0.23)"]
 beam = ["apache-beam (>=2.12)"]
 bottle = ["bottle (>=0.12.13)"]
 celery = ["celery (>=3)"]
+celery-redbeat = ["celery-redbeat (>=2)"]
 chalice = ["chalice (>=1.16.0)"]
 clickhouse-driver = ["clickhouse-driver (>=0.2.0)"]
 django = ["django (>=1.8)"]
@@ -2227,9 +2230,10 @@ grpcio = ["grpcio (>=1.21.1)"]
 httpx = ["httpx (>=0.16.0)"]
 huey = ["huey (>=2)"]
 loguru = ["loguru (>=0.5)"]
+openai = ["openai (>=1.0.0)", "tiktoken (>=0.3.0)"]
 opentelemetry = ["opentelemetry-distro (>=0.35b0)"]
 opentelemetry-experimental = ["opentelemetry-distro (>=0.40b0,<1.0)", "opentelemetry-instrumentation-aiohttp-client (>=0.40b0,<1.0)", "opentelemetry-instrumentation-django (>=0.40b0,<1.0)", "opentelemetry-instrumentation-fastapi (>=0.40b0,<1.0)", "opentelemetry-instrumentation-flask (>=0.40b0,<1.0)", "opentelemetry-instrumentation-requests (>=0.40b0,<1.0)", "opentelemetry-instrumentation-sqlite3 (>=0.40b0,<1.0)", "opentelemetry-instrumentation-urllib (>=0.40b0,<1.0)"]
-pure-eval = ["asttokens", "executing", "pure_eval"]
+pure-eval = ["asttokens", "executing", "pure-eval"]
 pymongo = ["pymongo (>=3.1)"]
 pyspark = ["pyspark (>=2.4.4)"]
 quart = ["blinker (>=1.1)", "quart (>=0.16.1)"]
@@ -2605,5 +2609,5 @@ multidict = ">=4.0"
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.11"
-content-hash = "e22332c90a55dc7304fa88865078eaf859d00bfb103564ac1329c6b1cc4bf20a"
+python-versions = "^3.12.2"
+content-hash = "fa9bc15cf817510ddb6514d8d3120389fc247507430a56aba7a6d31d836c43ec"

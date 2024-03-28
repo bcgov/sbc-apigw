@@ -1,7 +1,8 @@
 # Used to populate product card components
-name: Product Name Here
-description: Product Description Here
-badge: NEW | BETA etc
+name: Business Search
+description: Search for businesses registered in B.C. and request copies of business documents.
+badge: BETA
 bulletPoints: 
-  - bullet point 1
-  - bullet point 2
+  - Search for businesses by name or number.
+  - Search for firms by their owner.
+  - Download business documents.

@@ -1,7 +1,8 @@
 # Used to populate product card components
-name: Product Name Here
-description: Product Description Here
-badge: NEW | BETA etc
+name: Platform Payment and Catalog Services
+description: The payment and catalog services for the sbc-connect platform
+badge: BETA
 bulletPoints: 
-  - bullet point 1
-  - bullet point 2
+  - Pay for a service
+  - Register services in the Catalog
+  - Transaction history

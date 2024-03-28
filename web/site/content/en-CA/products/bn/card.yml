@@ -1,7 +1,6 @@
 # Used to populate product card components
-name: Product Name Here
-description: Product Description Here
-badge: NEW | BETA etc
+name: Business Number
+description: Business Number services
+badge: BETA
 bulletPoints: 
-  - bullet point 1
-  - bullet point 2
+  - Manage a Business Number for Sole Proprietorships and General Partners
