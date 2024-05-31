@@ -16,7 +16,7 @@ sentry-sdk = "^1.45.0"
 flask-babel = "2.0.0"
 flask-jwt-oidc = "^0.3.0"
 gunicorn = "^22.0.0"
-sbc-common-components = {git = "https://github.com/bcgov/sbc-common-components.git", rev = "master", subdirectory = "python"}
+sbc-common-components = {git = "https://github.com/bcgov/sbc-common-components.git", rev = "22978d810dc4e85c51c3129936686b0a17124e64", subdirectory = "python"}
 auth-api = {git = "https://github.com/bcgov/sbc-auth.git", rev = "main", subdirectory = "auth-api"}
 
 [tool.poetry.group.test.dependencies]

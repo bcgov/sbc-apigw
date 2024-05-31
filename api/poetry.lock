@@ -886,13 +886,12 @@ packaging = ">=14.1"
 
 [[package]]
 name = "flask-opentracing"
-version = "2.0.0"
+version = "1.1.0"
 description = "OpenTracing support for Flask applications"
 optional = false
 python-versions = "*"
 files = [
-    {file = "Flask-OpenTracing-2.0.0.tar.gz", hash = "sha256:4de9db3d4f0d2b506ce3874fc721278d41b2e8b0125ea567164be0100df502fe"},
-    {file = "Flask_OpenTracing-2.0.0-py3-none-any.whl", hash = "sha256:e7086ffb3531a518c6e3bf2b365af4a51e56a0922fdd5ebe91c9ddeeda632e70"},
+    {file = "Flask-OpenTracing-1.1.0.tar.gz", hash = "sha256:a9a39d367fbe7e9ed9c77b90ac48159c1a3e82982a5abf84d3f4d710d24580ac"},
 ]
 
 [package.dependencies]
@@ -900,7 +899,7 @@ Flask = "*"
 opentracing = ">=2.0,<3"
 
 [package.extras]
-tests = ["flake8", "flake8-quotes", "mock", "pytest", "pytest-cov", "tox"]
+tests = ["flake8", "flake8-quotes", "mock", "pytest", "pytest-cov"]
 
 [[package]]
 name = "flask-script"
@@ -2156,15 +2155,15 @@ develop = false
 [package.dependencies]
 flask = "*"
 flask-jwt-oidc = ">=0.1.5"
-Flask-OpenTracing = "*"
+Flask-OpenTracing = "1.1.0"
 Flask-SQLAlchemy = "*"
 jaeger-client = "*"
 
 [package.source]
 type = "git"
 url = "https://github.com/bcgov/sbc-common-components.git"
-reference = "master"
-resolved_reference = "5807c201b057875f9061f60b408ab765ebaa4235"
+reference = "22978d810dc4e85c51c3129936686b0a17124e64"
+resolved_reference = "22978d810dc4e85c51c3129936686b0a17124e64"
 subdirectory = "python"
 
 [[package]]
@@ -2594,4 +2593,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12.3"
-content-hash = "061293942f65bad535c4b790c0709c967a073984ec8cce2b90b4809f12d1e500"
+content-hash = "745d361fb851780baf270feabe742fe34a667e9c9ef3e78958417c505ff9493e"
