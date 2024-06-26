@@ -30,7 +30,7 @@ requests-mock = "^1.12.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.0"
-faker = "^24.11.0"
+faker = "^26.0.0"
 lovely-pytest-docker = "^0.3.1"
 
 [build-system]
