@@ -2,9 +2,15 @@
 defineProps<{
   accordianNavItems?: AccordianNavItem[] | undefined
 }>()
-const user = useCurrentUser()
+// const user = useCurrentUser()
 const { currentDir, tocLinks } = useDocPageData()
-const { mainLinks, mobileNavRef, loggedInUserOptions, loggedOutUserOptions, closeMobileNav } = useSbcNav()
+const {
+  mainLinks,
+  mobileNavRef,
+  // loggedInUserOptions, leave out auth options for now
+  // loggedOutUserOptions,
+  closeMobileNav
+} = useSbcNav()
 </script>
 <template>
   <UModal
@@ -48,7 +54,8 @@ const { mainLinks, mobileNavRef, loggedInUserOptions, loggedOutUserOptions, clos
           <div class="flex gap-1">
             <ColorModeSelect />
             <LocaleSelect />
-            <UDropdown
+            <!-- leave out auth options for now -->
+            <!-- <UDropdown
               v-if="!user"
               :items="loggedOutUserOptions"
             >
@@ -89,7 +96,7 @@ const { mainLinks, mobileNavRef, loggedInUserOptions, loggedOutUserOptions, clos
                   account-name=""
                 />
               </template>
-            </UDropdown>
+            </UDropdown> -->
             <UButton
               icon="i-mdi-window-close"
               color="white"

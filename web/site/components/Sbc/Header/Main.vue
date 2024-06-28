@@ -1,9 +1,14 @@
 <script setup lang="ts">
-const { mainLinks, openMobileNav, loggedInUserOptions, loggedOutUserOptions } = useSbcNav()
+const {
+  mainLinks,
+  openMobileNav
+  // loggedInUserOptions, leaving out auth options for now
+  // loggedOutUserOptions
+} = useSbcNav()
 // const { t } = useI18n()
-const localePath = useLocalePath()
+// const localePath = useLocalePath()
 const headerRef = ref<HTMLElement | null>(null)
-const user = useCurrentUser()
+// const user = useCurrentUser()
 // expose template ref to access properties in parent
 defineExpose({
   headerRef
@@ -43,7 +48,8 @@ defineExpose({
       <div class="flex gap-1">
         <ColorModeSelect />
         <LocaleSelect />
-        <UDropdown
+        <!-- leaving out auth options for now -->
+        <!-- <UDropdown
           v-if="!user"
           class="lg:hidden"
           :items="loggedOutUserOptions"
@@ -101,7 +107,7 @@ defineExpose({
               account-name=""
             />
           </template>
-        </UDropdown>
+        </UDropdown> -->
         <UButton
           class="lg:hidden"
           icon="i-mdi-menu"

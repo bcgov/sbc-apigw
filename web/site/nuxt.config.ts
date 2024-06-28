@@ -3,19 +3,26 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
   nitro: {
+    routeRules: {
+      '/en-CA/sbc/**': { redirect: '/en-CA' }
+    },
     prerender: {
-      routes: [
-        '/en-CA/sbc/tos'
+      routes: [],
+      ignore: [
+        '/en-CA/sbc/dashboard',
+        '/en-CA/sbc/tos',
+        '/en-CA/sbc/auth/login',
+        '/en-CA/sbc/auth/logout'
       ]
     }
+  },
+  routeRules: {
+    '/': { redirect: '/en-CA' }
   },
   modules: ['@nuxtjs/eslint-module', '@nuxt/test-utils/module', 'nuxt-vuefire'],
   extends: ['@daxiom/sbc-nuxt-assets-layer'],
   imports: {
     dirs: ['stores', 'composables', 'enums', 'interfaces', 'types', 'utils']
-  },
-  routeRules: {
-    '/': { redirect: '/en-CA' }
   },
   i18n: {
     locales: [
@@ -46,7 +53,17 @@ export default defineNuxtConfig({
       'en-CA'
       // 'fr-CA'
     ],
-    contentHead: false
+    contentHead: false,
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark'
+      }
+    },
+    ignores: [
+      'web-component',
+      '/sbc/tos'
+    ]
   },
   colorMode: {
     preference: 'light',

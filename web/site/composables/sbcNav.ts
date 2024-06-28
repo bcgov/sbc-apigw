@@ -26,11 +26,12 @@ export function useSbcNav () {
         label: t('btn.products'),
         to: localePath('/products')
       },
-      {
-        icon: 'i-mdi-account',
-        label: t('btn.dashboard'),
-        to: localePath('/sbc/dashboard')
-      },
+      // exclude dashboard link for now
+      // {
+      //   icon: 'i-mdi-account',
+      //   label: t('btn.dashboard'),
+      //   to: localePath('/sbc/dashboard')
+      // },
       {
         icon: 'i-mdi-book-open-variant',
         label: 'Docs',

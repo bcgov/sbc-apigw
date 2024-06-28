@@ -2,6 +2,7 @@
   "name": "sbc-apigw-site",
   "private": true,
   "type": "module",
+  "version": "0.1.0",
   "scripts": {
     "build-check": "nuxt build",
     "build": "nuxt generate",
