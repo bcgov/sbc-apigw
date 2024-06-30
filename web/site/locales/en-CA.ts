@@ -13,6 +13,7 @@ export default {
     revoke: 'Revoke',
     copy: 'Copy',
     copied: 'Copied!',
+    copyCode: 'Copy Code Snippet',
     submit: 'Submit',
     next: 'Next',
     previous: 'Previous',

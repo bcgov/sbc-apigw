@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/en-CA/sbc/tos'
+        // '/en-CA/sbc/tos'
       ]
     }
   },
@@ -46,7 +46,13 @@ export default defineNuxtConfig({
       'en-CA'
       // 'fr-CA'
     ],
-    contentHead: false
+    contentHead: false,
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark'
+      }
+    }
   },
   colorMode: {
     preference: 'light',
@@ -82,5 +88,19 @@ export default defineNuxtConfig({
       appId: process.env.AUTH_APP_ID,
       measurementId: process.env.MEASUREMENT_ID
     }
+  },
+  vite: {
+    vue: {
+      template: {
+        compilerOptions: {
+          // treat all tags starting with 'bcros-' as custom elements
+          isCustomElement: tag => tag.startsWith('bcros-')
+        }
+      }
+    }
+  },
+  runtimeConfig: {
+    xApiKey: '',
+    accountID: ''
   }
 })

@@ -35,6 +35,9 @@ function resolvePath () {
     variant="link"
     class="-m-2"
   >
-    <slot />
+    <span class="flex items-center gap-1">
+      <slot />
+      <UIcon v-if="target === '_blank'" name="i-mdi-open-in-new" />
+    </span>
   </UButton>
 </template>
