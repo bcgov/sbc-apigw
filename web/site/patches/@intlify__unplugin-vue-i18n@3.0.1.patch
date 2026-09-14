@@ -1,0 +1,74 @@
+diff --git a/lib/index.cjs b/lib/index.cjs
+index fc10a4ec33f253f9c88da6a5873cc62adcf32a82..20da6f89fcd7dec55f601744cb3c844d12a31e7a 100644
+--- a/lib/index.cjs
++++ b/lib/index.cjs
+@@ -282,7 +282,7 @@ const unplugin = unplugin$1.createUnplugin((options = {}, meta) => {
+         );
+         const jsonPlugin = config.plugins.find((p) => p.name === "vite:json");
+         if (jsonPlugin) {
+-          const orgTransform = jsonPlugin.transform;
++          const orgTransform = typeof jsonPlugin.transform === "function" ? jsonPlugin.transform : jsonPlugin.transform?.handler;
+           jsonPlugin.transform = async function(code, id) {
+             if (!/\.json$/.test(id) || filter(id)) {
+               return;
+@@ -292,19 +292,19 @@ const unplugin = unplugin$1.createUnplugin((options = {}, meta) => {
+               return;
+             }
+             debug("org json plugin");
+-            return orgTransform.apply(this, [code, id]);
++            return orgTransform ? orgTransform.apply(this, [code, id]) : void 0;
+           };
+         }
+         const esbuildPlugin = config.plugins.find(
+           (p) => p.name === "vite:esbuild"
+         );
+         if (esbuildPlugin) {
+-          const orgTransform = esbuildPlugin.transform;
++          const orgTransform = typeof esbuildPlugin.transform === "function" ? esbuildPlugin.transform : esbuildPlugin.transform?.handler;
+           esbuildPlugin.transform = async function(code, id) {
+-            const result = await orgTransform.apply(this, [
++            const result = orgTransform ? await orgTransform.apply(this, [
+               code,
+               id
+-            ]);
++            ]) : null;
+             if (result == null) {
+               return result;
+             }
+diff --git a/lib/index.mjs b/lib/index.mjs
+index 75c37697e3bc9f438515e0c1240fb6ebce59b74f..bfb436bd5d6ade4d82a2faca3ac78853392e6e08 100644
+--- a/lib/index.mjs
++++ b/lib/index.mjs
+@@ -270,7 +270,7 @@ const unplugin = createUnplugin((options = {}, meta) => {
+         );
+         const jsonPlugin = config.plugins.find((p) => p.name === "vite:json");
+         if (jsonPlugin) {
+-          const orgTransform = jsonPlugin.transform;
++          const orgTransform = typeof jsonPlugin.transform === "function" ? jsonPlugin.transform : jsonPlugin.transform?.handler;
+           jsonPlugin.transform = async function(code, id) {
+             if (!/\.json$/.test(id) || filter(id)) {
+               return;
+@@ -280,19 +280,19 @@ const unplugin = createUnplugin((options = {}, meta) => {
+               return;
+             }
+             debug("org json plugin");
+-            return orgTransform.apply(this, [code, id]);
++            return orgTransform ? orgTransform.apply(this, [code, id]) : void 0;
+           };
+         }
+         const esbuildPlugin = config.plugins.find(
+           (p) => p.name === "vite:esbuild"
+         );
+         if (esbuildPlugin) {
+-          const orgTransform = esbuildPlugin.transform;
++          const orgTransform = typeof esbuildPlugin.transform === "function" ? esbuildPlugin.transform : esbuildPlugin.transform?.handler;
+           esbuildPlugin.transform = async function(code, id) {
+-            const result = await orgTransform.apply(this, [
++            const result = orgTransform ? await orgTransform.apply(this, [
+               code,
+               id
+-            ]);
++            ]) : null;
+             if (result == null) {
+               return result;
+             }

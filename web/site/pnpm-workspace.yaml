@@ -7,3 +7,7 @@ allowBuilds:
   protobufjs: true
   sharp: true
   vue-demi: true
+patchedDependencies:
+  '@intlify/unplugin-vue-i18n@3.0.1': patches/@intlify__unplugin-vue-i18n@3.0.1.patch
+  unhead@2.1.17: patches/unhead@2.1.17.patch
+  web-worker@1.5.0: patches/web-worker@1.5.0.patch

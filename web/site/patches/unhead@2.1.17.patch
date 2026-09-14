@@ -1,0 +1,12 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 00eb40aec9964f3ca356a029410b074e609fd757..51cc79b7f1ca734517083436506252ddc7ace5b7 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1,6 +1,7 @@
+ export { u as useHead, a as useHeadSafe, b as useSeoMeta, c as useServerHead, d as useServerHeadSafe, e as useServerSeoMeta } from './shared/unhead.C-69jnXc.mjs';
+ export { c as createHeadCore, a as createUnhead } from './shared/unhead.BrXkGDAU.mjs';
+ export { u as useScript } from './shared/unhead.B0o2oYhg.mjs';
++export { getActiveHead } from './legacy.mjs';
+ import './shared/unhead.ylJpsHyA.mjs';
+ import './shared/unhead.h_KkEIE6.mjs';
+ import './shared/unhead.AvDFlk_u.mjs';

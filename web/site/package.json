@@ -22,36 +22,29 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.9.1",
-    "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.7.0",
     "@nuxt/test-utils": "^3.13.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@playwright/test": "^1.45.1",
-    "@scalar/nuxt": "^0.2.194",
+    "@scalar/nuxt": "^0.6.67",
     "@testing-library/vue": "^8.1.0",
     "@typescript-eslint/parser": "^7.16.0",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^8.57.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "happy-dom": "^13.10.1",
-    "nuxt": "^3.15.4",
+    "nuxt": "^3.21.11",
     "nuxt-gtag": "^3.0.1",
-    "nuxt-vuefire": "^1.0.3",
     "playwright-core": "^1.45.1",
     "typescript": "^5.5.3",
     "vitest": "^1.6.0",
-    "vue": "^3.4.31",
-    "vue-router": "^4.4.0"
+    "vue": "^3.5.42",
+    "vue-router": "^4.6.4"
   },
   "dependencies": {
     "@daxiom/sbc-nuxt-assets-layer": "^0.3.1",
-    "@firebase/app-types": "^0.9.2",
-    "bcros-search-test-publish": "^0.1.4",
-    "firebase": "^10.12.3",
-    "firebase-admin": "^11.11.1",
-    "firebase-functions": "^4.9.0",
-    "vuefire": "^3.1.24"
+    "bcros-search-test-publish": "^0.1.4"
   },
   "packageManager": "pnpm@11.9.0"
 }
