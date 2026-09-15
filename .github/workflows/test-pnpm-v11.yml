@@ -22,11 +22,11 @@ jobs:
 
       - uses: pnpm/action-setup@v6
         with:
-          version: 11.9.0
+          version: 11.27.0
 
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: 24.21.0
           cache: pnpm
           cache-dependency-path: web/site/pnpm-lock.yaml
 
