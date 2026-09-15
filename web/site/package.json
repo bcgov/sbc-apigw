@@ -50,7 +50,7 @@
     "bcros-search-test-publish": "^0.1.4",
     "firebase": "^10.12.3",
     "firebase-admin": "^11.11.1",
-    "firebase-functions": "^4.9.0",
+    "firebase-functions": "^7.4.0",
     "vuefire": "^3.1.24"
   },
   "packageManager": "pnpm@11.9.0"
